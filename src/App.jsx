@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import Background from "./components/Background/Background";
 import NavBar from "./components/Navbar/NavBar";
+import Hero from "./components/Hero/Hero";
 
 const App = () => {
 
   const heroData = [
-    { text1: "Drive Your Dream", text2: "Find the perfect car today" },
-    { text1: "Power Meets Style", text2: "Explore the world of automobiles" },
-    { text1: "Start Your Journey", text2: "The road begins with the right car" }
+    { text1: "Drive Your", text2: "Dream" },
+    { text1: "Power Meets", text2: "Style" },
+    { text1: "Start Your", text2: "Journey" }
   ];
 
   const [heroCount, setHeroCount] = useState(0);
@@ -16,7 +17,16 @@ const App = () => {
   return (
     <div>
       <Background playStatus={playStatus} heroCount={heroCount} />
-      <NavBar/>
+      <NavBar />
+
+      <Hero
+        heroData={heroData[heroCount]}
+        heroCount={heroCount}
+        setHeroCount={setHeroCount}
+        playStatus={playStatus}
+        setPlayStatus={setPlayStatus}
+      />
+
     </div>
   );
 };
