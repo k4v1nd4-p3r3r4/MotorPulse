@@ -38,6 +38,7 @@ const Hero = ({ heroData, setHeroCount, heroCount, setPlayStatus, playStatus }) 
             src={playStatus ? pause_icon : play_icon}
             alt="play control"
           />
+          <p>See the video</p>
         </div>
 
       </div>
